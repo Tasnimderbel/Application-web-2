@@ -1,0 +1,29 @@
+<h2>{{age}}</h2>
+<h2>{{name}}</h2>
+
+
+<h1>{{message}}</h1>
+<button (click)="ChangeMessage()">changer le message</button>
+
+
+<ul>
+    <li *ngFor="let fruit of fruits">{{fruit}}</li>
+</ul>
+
+<div *ngFor="let produit of produits; let i = index">
+    <div class="card">
+        <div class="info">
+            <h3>{{produit.nom}}</h3>
+            <p>prix : {{ produit.prix | currency:'DT' }}</p>
+            <p>stock : {{ produit.stock }}</p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="afficher">
+    <p>cet élément s'affichera si afficherElement est vrai.</p>
+</div>
+
+<div *ngIf="!afficher">
+    <p>cet élément s'affichera si afficherElement est faux.</p>
+</div>
